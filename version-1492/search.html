@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影片搜索 - 一本影视</title>
+  <meta name="description" content="在一本影视静态影片索引中搜索影片标题、地区、类型、年份、题材和标签。">
+  <meta name="keywords" content="搜索,筛选,国产,视频,经典影片,电影合集,免费资源,在线播放,影视作品,影迷收藏,片单,整理,推荐,资源,平台">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+<header class="site-header" data-site-header>
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="一本影视首页">
+      <span class="brand-mark">影</span>
+      <span class="brand-copy">
+        <strong>一本影视</strong>
+        <em>经典国产影片视频合集在线播放</em>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a class=" nav-link" href="index.html">首页</a>
+      <a class=" nav-link" href="categories.html">分类</a>
+      <a class=" nav-link" href="rankings.html">排行榜</a>
+      <a class=" nav-link is-active" href="search.html">搜索</a>
+    </nav>
+    <form class="header-search" action="search.html" method="get" role="search">
+      <input type="search" name="q" placeholder="搜索影片、地区、题材" aria-label="搜索影片">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="mobile-nav-button" type="button" data-mobile-toggle aria-label="打开导航">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" data-mobile-nav aria-label="移动端导航">
+    <a href="index.html">首页</a>
+    <a href="categories.html">分类</a>
+    <a href="rankings.html">排行榜</a>
+    <a href="search.html">搜索</a>
+    <form action="search.html" method="get" role="search">
+      <input type="search" name="q" placeholder="搜索影片">
+      <button type="submit">搜索</button>
+    </form>
+  </nav>
+</header>
+<main class="site-main">
+<section class="page-hero compact-hero search-hero">
+  <div>
+    <span class="eyebrow">Search</span>
+    <h1>影片搜索</h1>
+    <p>输入影片标题、地区、题材、标签或年份，即可在 2000 条静态影片数据中快速筛选。</p>
+  </div>
+</section>
+
+<section class="content-section" data-search-page>
+  <form class="search-panel" data-search-form>
+    <label class="search-wide">
+      <span>关键词</span>
+      <input type="search" name="q" placeholder="例如：悬疑、爱情、中国大陆、2025" data-search-input>
+    </label>
+    <label>
+      <span>分类</span>
+      <select name="category" data-category-filter>
+        <option value="">全部分类</option>
+        <option value="经典片库">经典片库</option><option value="热门推荐">热门推荐</option><option value="剧情精选">剧情精选</option><option value="悬疑推理">悬疑推理</option><option value="情感喜剧">情感喜剧</option><option value="动作冒险">动作冒险</option><option value="历史传记">历史传记</option><option value="剧集精选">剧集精选</option>
+      </select>
+    </label>
+    <label>
+      <span>类型</span>
+      <select name="type" data-type-filter>
+        <option value="">全部类型</option>
+      </select>
+    </label>
+    <button type="submit" class="primary-button">搜索</button>
+  </form>
+  <div class="search-summary" data-search-summary>正在读取影片索引…</div>
+  <div class="movie-grid" data-search-results></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand compact">
+        <span class="brand-mark">影</span>
+        <span class="brand-copy">
+          <strong>一本影视</strong>
+          <em>经典国产影片视频合集在线播放</em>
+        </span>
+      </div>
+      <p>本合集收录了历年经典国产影片视频资源，包括众多优秀国产电影和影视作品，支持免费在线播放，帮助影迷轻松收藏和观看心仪内容。本站提供国产影视作品的资料整理与在线观看服务。</p>
+    </div>
+    <div class="footer-links">
+      <h2>站内导航</h2>
+      <a href="index.html">首页</a>
+      <a href="categories.html">分类总览</a>
+      <a href="rankings.html">排行榜</a>
+      <a href="search.html">影片搜索</a>
+    </div>
+    <div class="footer-links">
+      <h2>内容索引</h2>
+      <a href="category/classic-library.html">经典片库</a>
+      <a href="category/hot-recommend.html">热门推荐</a>
+      <a href="category/drama-choice.html">剧情精选</a>
+      <a href="category/suspense-crime.html">悬疑推理</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 一本影视. 内容以静态页面方式整理，支持电脑与移动端浏览。</p>
+</footer>
+<script src="assets/movie-data.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>
